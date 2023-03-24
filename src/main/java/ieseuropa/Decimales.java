@@ -2,7 +2,10 @@ package main.java.ieseuropa;
 
 public class Decimales {
 
-
+	public static double eliminarDecimales(double dato) {
+		return (int) dato;
+	}
+	
 	public static double segundoGrado(double a, double b, double c) {
 		return (-b + Math.sqrt((b*b) - (4*a*c)) )/ 2*a;
 	}
@@ -25,8 +28,11 @@ public class Decimales {
 		System.out.println(segundoGrado(1, -4, 4));
 		System.out.println(segundoGrado(-1, 4, -4));
     
-    
-    
+    System.out.println("-----------------> Eliminar decimales numero");
+		System.out.println(eliminarDecimales(3.1415));
+		System.out.println(eliminarDecimales(1.4563));
+		System.out.println(eliminarDecimales(87.5555));
+
 	}
 
 }
