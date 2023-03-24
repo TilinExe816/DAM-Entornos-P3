@@ -45,11 +45,46 @@ public class Numeros {
 			return numero + " no es un numero primo";
 	}
 
+	private static boolean armstrong(int num) {
+		String numCadena = Integer.toString(num);
+		int numDigitos = numCadena.length();
+		double suma = 0;
+		for (int i = 0; i < numDigitos; i++) {
+			int cifra = Character.getNumericValue(numCadena.charAt(i));
+			double potencia = Math.pow(cifra, numDigitos);
+			suma += potencia;
+		}
+		if (suma == num) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	private static ArrayList<Integer> seriePell() {
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+		lista.add(0);
+		lista.add(1);
+		for (int i = 2; i < 15; i++) {
+			int nuevo = lista.get(i - 2) + (lista.get(i - 1) * 2);
+			lista.add(nuevo);
+		}
+		return lista;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(calcularFactorial(12));
 		System.out.println(numeroSuerte(34));
 		System.out.println(esPrimo(6));
+		
+		int arms = 153;
+		System.out.println(armstrong(arms));
+		
+		ArrayList<Integer> prueba = seriePell();
+		for (int i = 0; i < prueba.size(); i++) {
+			System.out.println(prueba.get(i));
+		}
+		
 	}
 
 }
