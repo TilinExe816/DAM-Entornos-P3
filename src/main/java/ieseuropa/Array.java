@@ -14,13 +14,28 @@ public class Array {
 		}
 		return datos;
 	}
-
+	public static float mediana (int[] datos) {
+		int [] ordenada= arrayMenorAMayor(datos);
+		float mediana;
+		if(ordenada.length%2!=0) {
+			mediana=ordenada[ordenada.length/2];
+		}
+		else {
+			float m1=ordenada[ordenada.length/2];
+			System.out.println(m1);
+			float m2=ordenada[ordenada.length/2-1];
+			System.out.println(m2);
+			mediana=(m1+m2)/2;
+		}
+		return mediana;
+	}
 	public static void main(String[] args) {
-		int[] test = { 1, 43, 5, 23, 7, 3, 6, 78 };
+		int[] test = { 1, 43, 5, 23, 7, 3, 6, 78};
 		test = arrayMenorAMayor(test);
 		for (int i = 0; i < test.length; i++) {
 			System.out.print(test[i] + " ");
 		}
+		System.out.println(mediana(test));
 	} 
 }
 
