@@ -70,6 +70,7 @@ public class Array {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hola");
+
 		int[] array = {458,6,68,4796,6341,31,46};
 		System.out.println(calcularMax(array));
 		System.out.println(calcularMin(array));
@@ -81,6 +82,12 @@ public class Array {
 			System.out.print(test[i] + " ");
 		}
 		System.out.println(mediana(test));
+	}
+
+	
+
+
+	
 	}
 
 	
