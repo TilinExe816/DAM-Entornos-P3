@@ -10,7 +10,7 @@ public class Array {
 		}
 		return max;
 	}
-	
+
 	private static int calcularMin(int[] array) {
 		int min = Integer.MAX_VALUE;
 		for(int num:array) {
@@ -33,8 +33,8 @@ public class Array {
 		}
 		return datos;
     }
-   
-   
+
+
    public static float mediana (int[] datos) {
 		int [] ordenada= arrayMenorAMayor(datos);
 		float mediana;
@@ -51,12 +51,29 @@ public class Array {
 		return mediana;
 	}
 
+	
+
+	private static double calcularMedia(int[] array) {
+
+		double media = 0.0;
+
+		for (int i = 0; i < array.length; i++) {
+			media = media + array[i];
+		}
+
+		media = media / array.length;
+
+		return media;
+		
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hola");
 		int[] array = {458,6,68,4796,6341,31,46};
 		System.out.println(calcularMax(array));
 		System.out.println(calcularMin(array));
+		System.out.println(calcularMedia(array));
 
 		int[] test = { 1, 43, 5, 23, 7, 3, 6, 78};
 		test = arrayMenorAMayor(test);
@@ -64,6 +81,7 @@ public class Array {
 			System.out.print(test[i] + " ");
 		}
 		System.out.println(mediana(test));
-	} 
-}
+	}
 
+	
+}
